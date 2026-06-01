@@ -1,0 +1,17 @@
+{
+  "name": "playwright-biz",
+  "version": "1.0.0",
+  "description": "業務システム向け Playwright E2E テンプレート",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "test": "npx bddgen && npx playwright test",
+    "test:ui": "npx bddgen && npx playwright test --ui",
+    "test:headed": "npx bddgen && npx playwright test --headed",
+    "report": "npx playwright show-report"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "playwright-bdd": "^8.5.1"
+  }
+}
