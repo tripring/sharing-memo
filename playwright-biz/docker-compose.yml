@@ -1,0 +1,10 @@
+services:
+  playwright:
+    build: .
+    environment:
+      - BASE_URL=${BASE_URL:-http://host.docker.internal:3000}
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
